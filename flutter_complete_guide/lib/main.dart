@@ -24,22 +24,23 @@ class _MyAppState extends State<MyApp> {
       print(_questionIndex);
     }
 
+  final questions = [
+    {
+      'question': 'What\'s your favourite color?',
+      'answers': ['Black', 'Red', 'Green', 'White']
+    },
+    {
+      'question': 'What\'s your favourite animal?',
+      'answers': ['Rabbit', 'Snake', 'Elephant', 'Lion']
+    },
+    {
+      'question': 'Who\'s your favourite instructor?',
+      'answers': ['Max', 'Max', 'Max', 'Max']
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
-    const questions = [
-      {
-        'question': 'What\'s your favourite color?',
-        'answers': ['Black', 'Red', 'Green', 'White']
-      },
-      {
-        'question': 'What\'s your favourite animal?',
-        'answers': ['Rabbit', 'Snake', 'Elephant', 'Lion']
-      },
-      {
-        'question': 'Who\'s your favourite instructor?',
-        'answers': ['Max', 'Max', 'Max', 'Max']
-      },
-    ];
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
