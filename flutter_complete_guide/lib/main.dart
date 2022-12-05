@@ -46,14 +46,14 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: Text('My First App'),
         ),
-        body: Column(
+        body: _questionIndex < questions.length ? Column(
           children: <Widget>[
             Question(questionText: questions[_questionIndex]['question'] as String),
             ...(questions[_questionIndex]['answers'] as List<String>).map((answer) {
               return Answer(_answerQuestion, answer);
             }).toList()
           ],
-        ),
+        ): const Center(child: Text("You did it")),
       ),
     );
   }
