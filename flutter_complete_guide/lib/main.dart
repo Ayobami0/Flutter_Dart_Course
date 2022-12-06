@@ -26,6 +26,13 @@ class _MyAppState extends State<MyApp> {
       print(_questionIndex);
     }
 
+  void _resetQuiz(){
+      setState(() {
+              _totalScore = 0;
+              _questionIndex = 0;
+            });
+    }
+
   final _questions = [
     {
       'question': 'What\'s your favourite color?',
@@ -67,7 +74,7 @@ class _MyAppState extends State<MyApp> {
           questionIndex: _questionIndex,
           questions: _questions
         ):
-        Result(resultScore: _totalScore,)
+        Result(resultScore: _totalScore, reset: _resetQuiz)
       ),
     );
   }
